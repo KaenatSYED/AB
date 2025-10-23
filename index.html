@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Accès par code</title>
+</head>
+<body>
+  <h2>Entrez le code pour accéder au lien</h2>
+  <input id="code" placeholder="code">
+  <button onclick="check()">Accéder</button>
+
+  <script>
+    const CORRECT = "MONCODE123"; // change le code ici
+    const SECRET_LINK = "https://example.com/ton-lien";
+
+    function check(){
+      const entered = document.getElementById('code').value;
+      if(entered === CORRECT){
+        window.location.href = SECRET_LINK;
+      } else {
+        alert('Code invalide');
+      }
+    }
+  </script>
+</body>
+</html>
